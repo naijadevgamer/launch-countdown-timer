@@ -1,0 +1,18 @@
+{
+  "name": "launch-countdown-timer",
+  "version": "1.0.0",
+  "description": "![Design preview for the Launch countdown timer coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel watch:sass devserver ",
+    "compile:sass": "sass sass/main.scss css/style.comp.css ",
+    "prefix:css": "postcss -u autoprefixer -b 'last 20 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "sass css/style.prefix.css css/style.css  --style=compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "thenaijagamer",
+  "license": "ISC"
+}

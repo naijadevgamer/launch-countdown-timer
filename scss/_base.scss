@@ -1,0 +1,60 @@
+// COLOR VARIABLES
+// ### Primary
+$color-primary-1: hsl(237, 18%, 59%); // Grayish-blue
+$color-primary-2: hsl(345, 95%, 68%); // Soft-red
+
+// ### Neutral
+$color-white: hsl(0, 0%, 100%);
+$dark-desaturated-blue: hsl(236, 21%, 26%);
+$very-dark-blue-1: hsl(235, 16%, 14%);
+$very-dark-blue-2: hsl(234, 17%, 12%);
+
+$shadow-dark: 0rem 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+
+//RESPONSIVE BREAKPOINT
+$bp-large-desktop: 112.5em; //1800px
+$bp-tab-land: 75em; //1200px
+$bp-tab-port: 56.25em; //900px
+$bp-phone: 37.5em; //600px
+$bp-small-phone: 18.75em; //300px
+
+// BASE
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+  @media only screen and (min-width: $bp-large-desktop) {
+    font-size: 75%;
+  }
+  @media only screen and (max-width: $bp-tab-land) {
+    font-size: 56.25%;
+  }
+  @media only screen and (max-width: $bp-tab-port) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  min-height: 100vh;
+  color: $color-white;
+  text-transform: uppercase;
+  padding: 0 2.5rem;
+  padding-bottom: 3rem;
+  font-weight: 600;
+  overflow: hidden;
+  position: relative;
+}
+// ::selection {
+//   background-color: $color-white;
+//   color: $dark-text;
+// }
