@@ -1,0 +1,80 @@
+// Heading
+.header {
+  color: $color-white;
+  margin-bottom: 8rem;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+}
+// Main
+.time {
+  display: flex;
+  &:not(:last-child) {
+    margin-right: 3rem;
+  }
+
+  &__unit {
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+  &__count {
+    height: 15rem;
+    width: 15rem;
+    background-color: $dark-desaturated-blue;
+    color: $color-primary-2;
+    margin-bottom: 1rem;
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 7px;
+  }
+  &__name {
+    color: $color-primary-1;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 7px;
+  }
+}
+
+// Footer
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url(../images/pattern-hills.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__icons {
+    display: flex;
+    justify-content: center;
+  }
+  &__icon {
+    height: 24px;
+    width: 24px;
+    fill: $color-primary-1;
+    transition: fill 0.2s ease;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+    &:hover {
+      fill: $color-primary-2;
+      cursor: pointer;
+    }
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

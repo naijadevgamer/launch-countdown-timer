@@ -1,0 +1,128 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  min-height: 100vh;
+  background-color: hsl(235, 16%, 14%);
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 20rem);
+  width: 100%;
+}
+
+.header {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 8rem;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+}
+
+.time {
+  display: flex;
+}
+.time:not(:last-child) {
+  margin-right: 3rem;
+}
+.time__unit:not(:last-child) {
+  margin-right: 3rem;
+}
+.time__count {
+  height: 15rem;
+  width: 15rem;
+  background-color: hsl(236, 21%, 26%);
+  color: hsl(345, 95%, 68%);
+  margin-bottom: 1rem;
+  font-size: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 7px;
+}
+.time__name {
+  color: hsl(237, 18%, 59%);
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 7px;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url(../images/pattern-hills.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__icons {
+  display: flex;
+  justify-content: center;
+}
+.footer__icon {
+  height: 24px;
+  width: 24px;
+  fill: hsl(237, 18%, 59%);
+  transition: fill 0.2s ease;
+}
+.footer__icon:not(:last-child) {
+  margin-right: 3rem;
+}
+.footer__icon:hover {
+  fill: hsl(345, 95%, 68%);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
