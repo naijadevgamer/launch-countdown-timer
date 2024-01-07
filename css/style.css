@@ -66,14 +66,37 @@ body .bg {
 .time__count {
   height: 15rem;
   width: 15rem;
-  background-color: hsl(236, 21%, 26%);
-  color: hsl(345, 95%, 68%);
-  margin-bottom: 1rem;
-  font-size: 8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 2rem;
   letter-spacing: 7px;
+  box-shadow: 0 8px 5px black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.time__count-1, .time__count-2 {
+  height: 50%;
+  width: 100%;
+  background-color: hsl(236, 21%, 26%);
+  font-size: 8rem;
+  color: hsl(345, 95%, 68%);
+  overflow: hidden;
+  line-height: 1;
+  text-align: center;
+}
+.time__count-1 span, .time__count-2 span {
+  display: inline-block;
+}
+.time__count-1 {
+  border-bottom: solid 0.1px hsl(235, 16%, 14%);
+  color: #fb517b;
+}
+.time__count-1 span {
+  transform: translateY(46.5%);
+}
+.time__count-2 {
+  border-top: solid 0.1px hsl(235, 16%, 14%);
+}
+.time__count-2 span {
+  transform: translateY(-46.5%);
 }
 .time__name {
   color: hsl(237, 18%, 59%);

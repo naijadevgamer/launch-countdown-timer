@@ -20,15 +20,40 @@
   &__count {
     height: 15rem;
     width: 15rem;
-    background-color: $dark-desaturated-blue;
-    color: $color-primary-2;
-    margin-bottom: 1rem;
-    font-size: 8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 2rem;
     letter-spacing: 7px;
+    box-shadow: 0 8px 5px black;
+    border-radius: 5px;
+    overflow: hidden;
   }
+  &__count-1,
+  &__count-2 {
+    height: 50%;
+    width: 100%;
+    background-color: $dark-desaturated-blue;
+    font-size: 8rem;
+    color: $color-primary-2;
+    overflow: hidden;
+    line-height: 1;
+    text-align: center;
+    span {
+      display: inline-block;
+    }
+  }
+  &__count-1 {
+    border-bottom: solid 0.1px $very-dark-blue-1;
+    color: darken($color-primary-2, 3%);
+    span {
+      transform: translateY(46.5%);
+    }
+  }
+  &__count-2 {
+    border-top: solid 0.1px $very-dark-blue-1;
+    span {
+      transform: translateY(-46.5%);
+    }
+  }
+
   &__name {
     color: $color-primary-1;
     text-align: center;
