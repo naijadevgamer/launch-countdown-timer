@@ -9,9 +9,6 @@ $dark-desaturated-blue: hsl(236, 21%, 26%);
 $very-dark-blue-1: hsl(235, 16%, 14%);
 $very-dark-blue-2: hsl(234, 17%, 12%);
 
-$shadow-dark: 0rem 2rem 6rem rgba(0, 0, 0, 0.3);
-$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
-
 //RESPONSIVE BREAKPOINT
 $bp-large-desktop: 112.5em; //1800px
 $bp-tab-land: 75em; //1200px
@@ -60,10 +57,5 @@ body {
     left: 0;
     height: calc(100vh - 20rem);
     width: 100%;
-    // object-fit: cover;
   }
 }
-// ::selection {
-//   background-color: $color-white;
-//   color: $dark-text;
-// }
