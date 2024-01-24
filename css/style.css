@@ -57,8 +57,7 @@ body .bg {
 }
 @media only screen and (max-width: 37.5em) {
   .header {
-    margin: 4rem 0;
-    font-size: 1.8rem;
+    margin-top: 4rem;
   }
 }
 

@@ -1,37 +1,8 @@
-const labelFlip1 = document.querySelector(".time__count--sec .count-inner--f1");
-const labelFlip2 = document.querySelector(".time__count--sec .count-inner--f2");
-const labelSecOutput1 = document.querySelector(
-  ".time__count--sec .count-inner--n1 span"
-);
-const labelSecOutput2 = document.querySelector(
-  ".time__count--sec .count-inner--n2 span"
-);
-const labelMinOutput1 = document.querySelector(
-  ".time__count--min .count-inner--n1 span"
-);
-const labelMinOutput2 = document.querySelector(
-  ".time__count--sec .count-inner--n2 span"
-);
-const labelHourOutput1 = document.querySelector(
-  ".time__count--hour .count-inner--n1 span"
-);
-const labelHourOutput2 = document.querySelector(
-  ".time__count--hour .count-inner--n2 span"
-);
-const labelDayOutput1 = document.querySelector(
-  ".time__count--day .count-inner--n1 span"
-);
-const labelDayOutput2 = document.querySelector(
-  ".time__count--day .count-inner--n2 span"
-);
-
-// setInterval()
+// const
 let time = 86400 * 15; // seconds
-let sec;
-let min;
-let hour;
-let day;
+let sec, min, day, hour;
 
+// Count down functionality
 setInterval(() => {
   const newMin = min;
   const newDay = day;
@@ -42,16 +13,24 @@ setInterval(() => {
   hour = String(Math.trunc(time / (60 * 60)) % 24).padStart(2, 0);
   day = String(Math.trunc(time / (60 * 60 * 24))).padStart(2, 0);
 
-  console.log(`${day}: ${hour}: ${min}: ${sec}`);
   // animation
+  if (newMin !== min && newMin !== undefined) {
+    animate("min", min);
+  }
+  if (newDay !== day && newDay !== undefined) {
+    animate("day", day);
+  }
+  if (newHour !== hour && newHour !== undefined) {
+    animate("hour", hour);
+  }
   animate("sec", sec);
+  // console.log(`${day}: ${hour}: ${min}: ${sec}`);
+
   time--;
 }, 1000);
 
 // Animation function
-
 function animate(unit, value) {
-  // animation
   document.querySelector(
     `.time__count--${unit} .count-inner--f1`
   ).style.animation = "flip-1 1s linear";
