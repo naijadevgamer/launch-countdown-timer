@@ -1,5 +1,5 @@
 // Initial time declaration
-let inTime = (+new Date(2024, 0, 26, 0, 5, 0) - new Date().getTime()) / 1000; // time stamp in seconds
+let inTime = (+new Date(2024, 1, 10, 0, 0, 0) - new Date().getTime()) / 1000; // time stamp in seconds
 
 let time =
   inTime <= 0
@@ -9,7 +9,7 @@ time = Math.trunc(time);
 let sec, min, day, hour;
 
 // Count down functionality
-setInterval(() => {
+const countDown = () => {
   if (time === undefined || time < 0) {
     // If countdown reaches zero, update launch time to the next 15 days
     const date = new Date();
@@ -50,7 +50,10 @@ setInterval(() => {
   animate("sec", sec);
 
   time--;
-}, 1000);
+};
+
+countDown(); // To start immediately without any delay
+setInterval(countDown, 1000);
 
 // Animation functionality
 function animate(unit, value) {
