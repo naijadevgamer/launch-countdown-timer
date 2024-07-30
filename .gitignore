@@ -3,8 +3,6 @@
 
 /design
 /node_modules
-/README-template.md
-/README.md
 /style-guide.md
 
 # Avoid your project being littered with annoying .DS_Store files!

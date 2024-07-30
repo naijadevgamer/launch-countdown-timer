@@ -6,11 +6,12 @@ let time =
     ? (+new Date(localStorage.date) - new Date().getTime()) / 1000
     : inTime;
 time = Math.trunc(time);
+
 let sec, min, day, hour;
 
 // Count down functionality
 const countDown = () => {
-  if (time === undefined || time < 0) {
+  if (isNaN(time) || time < 0) {
     // If countdown reaches zero, update launch time to the next 15 days
     const date = new Date();
     date.setDate(date.getDate() + 15);
